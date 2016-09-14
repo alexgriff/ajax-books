@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+
+    <title>Books</title>
+    <script src="scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
+    <script type="text/javascript" src="scripts/jquery.autocomplete.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/book.js"></script>
+    <script src="scripts/shelf.js"></script>
+
+
+
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+
+
+  </head>
+  <body background="images/library.jpg">
+    <div class="background-transparency">
+      <h1 id="brand">How Many Books?</h1>
+
+      <div class="page-header"><h3>Add a book to your bookshelf</h3></div>
+
+       <form action="">
+         <div class='name '>
+           <label for="name">Title</label>
+           <input id='book_title' class='input input_name' type="text" >
+           <br/>
+           <label for="name">Author</label>
+           <input id='book_author' class='input input_author' type="text" >
+         </div>
+         <input type="submit" id="myButton" data-loading-text="Finding book..." class="btn btn-primary" autocomplete="off" value='Add book'>
+
+        </input>
+
+      </form>
+
+      <div class="error">
+      </div>
+
+
+      <br/>
+      <br/>
+
+      <div class="shelf" style='background-image: url("images/bookshelf.png"); padding: .85em; display: inline-block'>
+      </div>
+
+
+      <div class="shelfMessage">
+      </div>
+
+      <div class="shelfInfo">
+        <div class="shelfMessage"></div>
+      </div>
+
+      <div class=floor style="display: none;">
+        <h3>Books have fallen off the shelf :O</h3>
+        <div class="fallen" style="margin-left: 2.5em">
+        </div>
+      </div>
+
+
+      <div class="shelfContents">
+        <h3>Currently on your shelf:</h3>
+        <ul></ul>
+      </div>
+
+
+
+
+
+      <br/><br/>
+
+    </div>
+  </body>
+</html>
