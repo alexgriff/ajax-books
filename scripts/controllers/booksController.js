@@ -5,10 +5,9 @@ class BooksController {
 
   attachListeners() {
 
-    // listener on submit button
     $( 'input:submit' ).click(function( e ) {
       e.preventDefault();
-        // fn to make request, use a GoogleBooksAdapter class
+        // TO DO: fn to make request, use a GoogleBooksAdapter class
         // something like:
         // var adapter = new GoogleBooksAdapter( input );
         // adapter.buildBook();
@@ -18,11 +17,6 @@ class BooksController {
         $('#bookAuthor').val("");
       })
 
-
-      // listener on book class
-      $( 'body' ).on( "click", ".book", function() {
-        // fn to remove book from shelf
-      })
     }
 
   getInput() {

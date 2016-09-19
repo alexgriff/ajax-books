@@ -6,6 +6,7 @@ class GoogleBooksAdapter {
   }
 
   buildBook() {
+    // TO DO:
     // should make the necessaary api calls and return a new Book object
 
     // step 1:
