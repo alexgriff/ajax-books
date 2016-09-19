@@ -7,6 +7,8 @@ class Book {
   }
 
 
+  // not very book has a thickness data from the api,
+  // if it doesn't we're just going to kind of make it up
   estimateThickness() {
     var pageWidth = 0.05
     var coverWidth= 0.40;
