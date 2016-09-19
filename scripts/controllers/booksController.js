@@ -4,27 +4,31 @@ class BooksController {
   }
 
   attachListeners() {
-    var booksCntrl = this;
+
+    // listener on submit button
     $( 'input:submit' ).click(function( e ) {
       e.preventDefault();
         // fn to make request, use a GoogleBooksAdapter class
         // something like:
-        // var adapter = new GoogleBooksAdapter(input);
+        // var adapter = new GoogleBooksAdapter( input );
         // adapter.buildBook();
+
+        // reset input fields to empty strings
+        $('#bookTitle').val("");
+        $('#bookAuthor').val("");
       })
 
 
-    });
-
-    $( 'body' ).on( "click", ".book", function() {
-      // fn to remove book from shelf
-    })
-  }
+      // listener on book class
+      $( 'body' ).on( "click", ".book", function() {
+        // fn to remove book from shelf
+      })
+    }
 
   getInput() {
     return {
-      title: $('#book_title').val(),
-      author: $('#book_author').val()
+      title: $('#bookTitle').val(),
+      author: $('#bookAuthor').val()
     }
   }
 
