@@ -7,7 +7,7 @@ class GoogleBooksAdapter {
 
   buildBook() {
     // TO DO:
-    // should make the necessaary api calls and return a new Book object
+    // should make the necessary api calls and return a new Book object
 
     // step 1:
     // query the api with title and author to get the volume id

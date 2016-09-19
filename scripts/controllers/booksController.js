@@ -4,7 +4,6 @@ class BooksController {
   }
 
   attachListeners() {
-
     $( 'input:submit' ).click(function( e ) {
       e.preventDefault();
         // TO DO: fn to make request, use a GoogleBooksAdapter class
