@@ -22,11 +22,12 @@ class ShelvesController {
         '<p>Your book shelf has <strong>'+ this.shelf.remainingSpace() +'</strong> millimeters of free space</p>'
       )
 
-    this.displayBookInfo( this.shelf )
+    // iterate over shelf's books and display each
+    this.displayBookInfo( this.shelf.books )
   }
 
-  displayBookInfo( shelf ) {
-    shelf.books.forEach(
+  displayBookInfo( books ) {
+    books.forEach(
       function( book ) {
         $( '.shelfContents ul')
           .append(
@@ -35,15 +36,5 @@ class ShelvesController {
         app.booksController.render( book )
       }
     )
-      $( '.shelf' ).show();
-      $( '.shelfContents' ).show();
-    // shelf.books.forEach(
-    //   function( book ) {
-    //     $( '.shelfContents ul')
-    //       .append(
-    //         '<li>' + book.title + " - " + book.pageCount + ' pages</li>'
-    //       )
-    //   }
-    // )
   }
 }

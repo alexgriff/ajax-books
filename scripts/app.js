@@ -1,4 +1,4 @@
-
+// global variable app
 var app = {};
 // ON DOCUMENT READY
 $(function(){

@@ -7,25 +7,17 @@ class BooksController {
     var booksCntrl = this;
     $( 'input:submit' ).click(function( e ) {
       e.preventDefault();
-      var input = booksCntrl.getInput();
-
-      var promise = new Promise( function( resolve, reject ) {
-        var adapter = new GoogleBooksAdapter( input );
-        if ( adapter ) {
-          resolve( adapter.buildBook() )
-        } else {
-          reject( )
-        }
+        // fn to make request, use a GoogleBooksAdapter class
+        // something like:
+        // var adapter = new GoogleBooksAdapter(input);
+        // adapter.buildBook();
       })
 
-      promise.then( function( book ) {
-        app.shelvesController.shelf.addBook( book );
-        app.shelvesController.render();
-      })
+
     });
 
     $( 'body' ).on( "click", ".book", function() {
-      alert('bye')
+      // fn to remove book from shelf
     })
   }
 
